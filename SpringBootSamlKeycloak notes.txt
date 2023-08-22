@@ -1,0 +1,13 @@
+I followed this tutorial
+    https://jarmx.blogspot.com/2022/09/single-sign-on-with-saml-20-spring-boot.html
+
+
+docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin -v /Users/danteshte/Docker/mounts/keycloak/keycloak-data/:/opt/keycloak/data/h2/ quay.io/keycloak/keycloak:18.0.1 start-dev
+
+Go in the browser to http://localhost:8081/landing
+When redirected to Keycloak, enter user1/user1
+
+http://localhost:8080/realms/IDP_REALM/protocol/saml/descriptor
+
+Usefull links
+https://stackoverflow.com/questions/59681041/how-to-take-db-backup-in-keycloak-docker-container/60554189#60554189
